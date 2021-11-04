@@ -1,0 +1,24 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  // Will inherit whatever is declared in the body
+  // Considered better practice
+  box-sizing: inherit;
+}
+
+html {
+  // Should set font-size as a percentage to allow user to adjust browser font-size
+  // Default browser font-size = 16px
+
+  // 10px = 1rem
+  //  10 / 16 = 62.5% (translates to 10px )
+
+  // Overall setting for how we size the page
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
