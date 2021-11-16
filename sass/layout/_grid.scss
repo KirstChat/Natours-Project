@@ -5,15 +5,32 @@
   // Selects everything except the last child
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
+
+    @include responsive(tablet-port) {
+      margin-bottom: $gutter-vertical-sm;
+    }
+  }
+
+  @include responsive(tablet-port) {
+    max-width: 50rem;
   }
 
   @include clearfix;
 
-  [class^="col-"] {
+  [class^='col-'] {
     float: left;
 
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
+
+      @include responsive(tablet-port) {
+        margin-right: 0;
+        margin-bottom: $gutter-vertical-sm;
+      }
+    }
+
+    @include responsive(tablet-port) {
+      width: 100% !important;
     }
   }
 
